@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# sheepreact
+A game about sheep using typescript and React. This is a demo design of the game mechanics in anticipation of implementation in Tezos.
+Built following instructions at https://www.section.io/engineering-education/building-a-react-app-with-typescript/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run the game
 
-## Available Scripts
+```
+~/sheepreact/sheepgame$ npm start
+```
 
-In the project directory, you can run:
+## Paddock Improvement
+Move your sheep through a series of improved pastures. Pay the costs of raising sheep for market. Make money from selling wool and use it to improve pasture.
 
-### `npm start`
+## Game Cycle
+The result of two rolled dice is added and the player is advanced to the corresponding next event. Each mod 43 there is a Wool Sale. The events are various functions affecting the yields at Stock Sales or Wool Sales. Some game tokens and some game obligations will be handled with NFTs. There are asset NFTs and liability NFTs. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## NFTs
+The NFTs will be burned when used, or when a Stud Ram dies. The NFTs are obtained for a fee, and are often optional.  Others are obligations you have to meet, and you are required to burn them, generally at Wool Sale, incurring some owed deficit defined by the NFT. Holding some will help you, holding others may mean a penalty, but you burn them when you use them.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Asset NFTs
 
-### `npm test`
+#### Stud Rams
+There are six Stud Rams. Holders of a Stud Ram NFT will have a premium added to their Wool Sales yield.
+   - Elmsford Park Rex
+   - Winton Boy II
+   - Mitchell's Pride
+   - Lachlan Lad
+   - King of Warramboo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Insurance Policy for Stud Ram
+- This NFT is not transferable and pays out if you have a Stud Ram that dies.
 
-### `npm run build`
+#### Haystack
+- Holders of a Haystack NFT are afforded protection if their bore dries up
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Fire Fighting Equipment
+- Protection from fire.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Control Program NFTs
+These NFTs entitle holders to a premium at Wool Sale and are burned on use. They also afford protection against their respective bad events.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Worm Control Programme
+ - Control of Weeds and Insects
+ - Fertilized Pasture
 
-### `npm run eject`
+### Liabilty NFTs
+#### Blowfly Wave
+- A penalty at Wool Sale for poor management, randomly obtained from the Tucker Bag. Can be burned before the penalty is applied if you first Jet Sheep.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##### High Stock Prices Ruling
+- Imposes a premium on the selling or buying price at the  next Stock Sale
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### New Sheering Shed
+- A penalty proportional to your sheep holdings and obtained randomly from the Tucker Bag.
